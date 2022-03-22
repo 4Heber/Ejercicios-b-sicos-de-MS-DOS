@@ -76,7 +76,7 @@
 > - Commands `Set-location .\APLI\WORD\PRACT\` & `Get-childitem ..\`
 
 #### Ejercicio 2
->  
+> 
 >
 >
 >
