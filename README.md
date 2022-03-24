@@ -77,10 +77,63 @@
 
 #### Ejercicio 2
 > 
+> *Partición nueva (F:) de la unidad (D:)*
 >
+> 1. **Utilizando el editor de textos de MS-DOS, crear archivo de texto denominado EJER.TXT, con el siguiente contenido, y almacenarlo dentro de la carpeta 'TEXTOS'**
+> 
+> ![image](https://user-images.githubusercontent.com/77643882/159903030-9962672d-2342-4195-a7b9-d7b4b61b080e.png)
 >
+> - Commands `NOTEPAD .\APLI\WORD\TEXTOS\EJER.TXT` & `GET-CONTENT .\APLI\WORD\TEXTOS\EJER.TXT` 
+>
+> 2. **Copiar el archivo 'EJER.TXT' en 'AGENDA':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159904512-53888f8d-6893-4eae-b1b1-247709e4cbcc.png)
+>
+> - Commands `COPY-ITEM .\APLI\WORD\TEXTOS\EJER.TXT .\VARIOS\AGENDA\EJER.TXT` & `GET-CHILDITEM .\VARIOS\AGENDA`
+
+> 3. **Borrar el archivo almacenado en la carpeta 'TEXTOS':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159905814-2d2a371e-5379-420b-8d21-ebe044748278.png)
+>
+> - Command `REMOVE-ITEM .\APLI\WORD\TEXTOS\EJER.TXT`
+
+> 4. **Añadir el siguiete párrafo al archivo 'EJER.TXT' *'Cada archivo tiene un nombre y una extensión que los distingue del resto de archivos'* :**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159907441-6833048b-35a4-4361-b97e-8f1fcdb13e9a.png)
+>
+> - Command `NOTEPAD .\VARIOS\AGENDA\EJER.TXT` & `GET-CONTENT .\VARIOS\AGENDA\EJER.TXT`
+
+> 5. **Copiar el archivo 'EJER.TXT' en la carpeta 'BASIC':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159908733-21379336-1da1-4182-905b-b3f21f5eed40.png)
+> 
+> - Command `COPY-ITEM .\VARIOS\AGENDA\EJER.TXT .\PROG\BASIC\EJER.TXT`
+
+> 6. **Cambiar el nombre del archivo almacenado en 'AGENDA' por 'FICHERO.TXT':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159909337-d7a066da-391f-4342-99ef-95fb6c43c74c.png)
+>
+> - Commands `RENAME-ITEM .\VARIOS\AGENDA\EJER.TXT FICHERO.TXT` & `GET-CHILDITEM .\VARIOS\AGENDA`
+
+> 7. **Mover el archivo 'FICHERO.TXT' a la carpeta 'BASIC':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159910827-b69455ad-665b-4450-8ef2-324656e319d4.png)
 >
 > 
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
 >
 >
 >
