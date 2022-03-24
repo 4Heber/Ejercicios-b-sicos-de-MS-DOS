@@ -75,6 +75,7 @@
 >
 > - Commands `Set-location .\APLI\WORD\PRACT\` & `Get-childitem ..\`
 
+
 #### Ejercicio 2
 > 
 > *Partición nueva (F:) de la unidad (D:)*
@@ -139,6 +140,7 @@
 >
 > - Commands `GET-CHILDITEM .\PROG\BASIC\` & `GET-CHILDITEM .\APLI\WORD\NOTAS\`
 
+
 #### Ejercicio 3
 
 > 1. **Borrar la carpeta 'ACCESS' y en su lugar crear una nueva carpeta llamada 'ASTRO':**
@@ -163,19 +165,92 @@
 >
 > ![image](https://user-images.githubusercontent.com/77643882/159929080-98f4a312-23e0-4763-bb54-ff4256fbd7dd.png)
 >
+> - Command `NOTEPAD .\HISTORIA\DATOS1\TYCHO.TXT` & `GET-CONTENT .\HISTORIA\DATOS1\TYCHO.TXT`
+
+> 5. **Utilizar el editor de MS-DOS para crear el siguiente archivo de texto, y guardarlo con el nombre 'KEPLER.TXT' dentro de la carpeta 'DATOS2':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159958602-9e5024af-67d1-43cf-8ae9-bd8366e2e37c.png)
+>
+> - Commands `NOTEPAD .\APLI\HISTORIA\DATOS2\KEPLER.TXT` & `GET-CONTENT .\APLI\HISTORIA\DATOS2\KEPLER.TXT`
+
+> 6. **Copiar los archivos 'TYCHO.TXT' y 'KEPLER.TXT' en la carpeta 'CIENCIA':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159960426-0c3495db-2b59-4c4a-ac6c-a471ab519737.png)
+>
+> - Commands `COPY-ITEM .\APLI\HISTORIA\DATOS1\TYCHO.TXT,.\APLI\HISTORIA\DATOS2\KEPLER.TXT .\APLI\CIENCIA\` & `GET-CHILDITEM .\APLI\CIENCIA\ -RECURSE`
+
+> 7. **Cambiar de lugar los archivos almacenados en 'DATOS1' y 'DATOS2' de forma que 'TYCHO.TXT' quede guardado dentro de 'DATOS2' y 'KEPLER.TXT' en 'DATOS1':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159961956-b93c77f1-bcd1-4d42-a4b6-01e866cbe97c.png)
+>
+> - Commands `MOVE-ITEM .\APLI\HISTORIA\DATOS1\TYCHO.TXT .\APLI\HISTORIA\DATOS2\` & `MOVE-ITEM .\APLI\HISTORIA\DATOS2\KEPLER.TXT .\APLI\HISTORIA\DATOS1\`
+
+> 8. **Crear un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribit el texto) y gúardalo dentro de la carpeta 'HISTORIA' con el nombre 'TOTAL.TXT':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159965428-472f4022-a73e-46d9-88f5-22afc03037ae.png)
+> ![image](https://user-images.githubusercontent.com/77643882/159965567-1e81829d-2b98-4a84-9df0-84a4e9e63098.png)
+>
+> - Commands `GET-CONTENT .\DATOS1\KEPLER.TXT, .\DATOS2\TYCHO.TXT | SET-CONTENT TOTAL.TXT` & `GET-CONTENT .\TOTAL.TXT`
+
+> 9. **Abrir el archivo 'KEPLER.TXT' almacenado en la carpeta 'CIENCIA' y añade el siguiente texto:**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159966551-19008f5d-1cda-4d76-a40a-9e429b02adf1.png)
+>
+> - Commands `NOTEPAD .\KEPLER.TXT` & `Get-Content .\KEPLER.TXT`
+
+> 10. **Cambiar el nombre del archivo anterior por el de 'GALILEO.TXT':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159967069-a024662a-2449-4217-9260-b7e5e405cf7e.png)
+>
+> - Command `RENAME-ITEM .\KEPLER.TXT GALILEO.TXT`
+
+
+#### Ejercicio 4
+
+*Nueva partición (A:) de la unidad (D:)*
+
+> 1. **Crear en la carpeta raíz de la unidad A: una carpeta denominada 'TECINFO':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159968907-90485f31-12ff-4025-84e4-bb33fc916703.png)
+>
+> - Command `MD "TECINFO"`
+
+> 2. **Crear dentro de 'TECINFO' el siguiente archivo de texto y definirlo como 'HARD.TXT':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159969460-bb058d4d-715d-45b6-a39d-704a73970344.png)
+>
+> - Command `NOTEPAD .\TECINFO\HARD.TXT`
+
+> 3. **Crear dentro de 'TECINFO' el siguiente archivo de texto y definirlo como 'SOFT.TXT':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159969982-3b5369d7-4437-45bf-bb13-6e1073225434.png)
+>
+> - Command `NOTEPAD .\TECINFO\SOFT.TXT`
+
+> 4. **Mover el contenido de 'TECINFO' a la carpeta 'APLI' de la unidad D: **
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159971237-e41bc3a5-76be-42ac-b444-a872e4161e47.png)
+>
+> - Command `Move-Item .\TECINFO\ D:\APLI\` & `Get-ChildItem D:\APLI`
+
+> 5. **Crear un nuevo archivo formado por la unión de 'HARD.TXT' y 'SOFT.TXT', sin volver a escribir el texto, y guardarlo en la carpeta 'AGENDA' con el nombre 'ORDER.TXT'**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/160015081-8b84cb5c-2441-422d-9d21-416b0add44d2.png)
+>
+> - Commands `Get-Content D:\APLI\TECINFO\HARD.TXT,D:\APLI\TECINFO\SOFT.TXT | Set-Content D:\VARIOS\AGENDA\ORDER.TXT` & `Get-ChildItem D:\VARIOS\AGENDA\`
+
+> 6. **Eliminar la carpeta 'TECINFO':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/160016042-b73c4bfe-2577-478e-9a61-c261baf382c9.png)
+>
+> -Command `Remove-Item D:\APLI\TECINFO\ -Recurse`
+
+> 7. **Copiar a la vez los archivos 'HARD.TXT' y 'SOFT.TXT' en la carpeta 'VARIOS':**
 > 
+> *Directorio 'TECINFO' con los archivos concatenados en el fichero 'ORDER.TXT' eliminado en el paso previo*
+
+> 8. **Cambiar la extensión de los archivos contenidos en 'AGENDA' por '.TYP'**
 >
+> ![image](https://user-images.githubusercontent.com/77643882/160018443-992d30bd-7a02-4be7-b63e-c2b3b86ad441.png)
 >
->
->
->
->
->
->
->
->
->
->
->
->
->
+> - Command `Rename-Item D:\VARIOS\AGENDA\ORDER.TXT ORDER.TYP` & `Get-ChildItem D:\VARIOS\AGENDA\`
