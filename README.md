@@ -119,9 +119,51 @@
 >
 > ![image](https://user-images.githubusercontent.com/77643882/159910827-b69455ad-665b-4450-8ef2-324656e319d4.png)
 >
+> - Command `MOVE-ITEM .\VARIOS\AGENDA\FICHERO.TXT .\PROG\BASIC`
+
+> 8. **Abrir el archivo 'EJER.TXT' y borrar la primera frase; Almacenar el nuevo archivo con el nombre 'NUEVO.TXT' dentro de la carpeta 'BASIC':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159911913-68b876ac-cf01-4f75-aa41-9cb82e1062d3.png)
+>
+> - Commands `NOTEPAD .\PROG\BASIC\EJER.TXT` & `RENAME-ITEM .\PROG\BASIC\EJER.TXT NUEVO.TXT`
+
+> 9. **Copiar el archivo 'NUEVO.TXT' en la carpeta 'NOTAS':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159912606-3c31bb49-0ec4-48fb-911f-9147b96d2ed2.png)
+>
+> - Command `COPY-ITEM .\PROG\BASIC\NUEVO.TXT .\APLI\WORD\NOTAS`
+
+> 10. **¿Cuántos archivos hay en la carpeta 'BASIC' y 'NOTAS'?:**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159913007-13b291a0-4410-4233-aec0-49b59eda8c74.png)
+>
+> - Commands `GET-CHILDITEM .\PROG\BASIC\` & `GET-CHILDITEM .\APLI\WORD\NOTAS\`
+
+#### Ejercicio 3
+
+> 1. **Borrar la carpeta 'ACCESS' y en su lugar crear una nueva carpeta llamada 'ASTRO':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159915128-1b03a972-dead-458f-af3c-76e1cd7dc1e3.png)
+>
+> - Commands `REMOVE-ITEM .\APLI\ACCESS\` & `NEW-ITEM .\APLI\ASTRO -ItemType Directory`
+
+> 2. **Crear una estructura de subcarpetas dentro de la carpeta 'ASTRO':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159925818-0311aaee-4180-4449-a0c4-5d2c1c4673cc.png)
+>
+> - Commands `MD "HISTORIA","CIENCIA"` & `TREE`
+
+> 3. **Situarse en la carpeta 'CIENCIA' y mostrar el listado de archivos y subcarpetas de la carpeta 'HISTORIA':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159927999-f072bcef-bfba-4e14-9754-b4ec5278370a.png)
+>
+> - Command `GET-CHILDITEM -recurse ..\HISTORIA\`
+
+> 4. **Utilizar el editor de MS-DOS para crear el siguiente archivo de texto y guardarlo con el nombre 'TYCHO.TXT' dentro de la carpeta 'DATOS1':**
+>
+> ![image](https://user-images.githubusercontent.com/77643882/159929080-98f4a312-23e0-4763-bb54-ff4256fbd7dd.png)
+>
 > 
->
->
 >
 >
 >
